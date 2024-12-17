@@ -1,16 +1,4 @@
-/* 
-### Primary
 
-- Dark Blue: hsl(233, 26%, 24%)
-- Lime Green: hsl(136, 65%, 51%)
-- Bright Cyan: hsl(192, 70%, 51%)
-
-### Neutral
-
-- Grayish Blue: hsl(233, 8%, 62%)
-- Light Grayish Blue: hsl(220, 16%, 96%)
-- Very Light Gray: hsl(0, 0%, 98%)
-- White: hsl(0, 0%, 100%) */
 
 * {
   margin: 0;
@@ -34,7 +22,7 @@ body {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 600;
-  color: hsl(0, 0%, 2%);
+  color: hsl(233, 26%, 24%);
   margin-left: 10px;
   border-bottom: 2px solid transparent;
 }
@@ -44,6 +32,7 @@ body {
   color: hsl(192, 70%, 51%);
   transition-duration: 0.5s;
   border-bottom: 2px solid hsl(192, 70%, 51%);
+  transform: translateX(10px);
 }
 .nav-bar > button {
   padding: 12px 28px;
@@ -139,10 +128,25 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   padding-bottom: 10vh;
+  gap: 20px;
+  flex-wrap: wrap;
 }
-.feature-item > img {
-  width: 65px;
-  margin-bottom: 5px;
+
+.feature-item {
+  background-color: hsl(192, 70%, 51%, 0.5);
+  border: 1px solid hsl(233, 26%, 80%);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
+  width: calc(25% - 20px);
+  min-height: 300px;
+  flex-grow: 1;
+}
+.feature-item:hover{
+  background-color: #fff;
+  transform: translateY(-10px);
+  transition-duration: 0.4s;
 }
 .feature-item > h1 {
   font-size: 25px;
@@ -153,9 +157,9 @@ body {
   
 }
 .feature-item > p {
-  color: hsl(233, 8%, 62%);
-  font-weight: 700;
-
+  font-size: 16px;
+  color: hsl(233, 8%, 40%);
+  line-height: 1.5; 
 }
 .blog-section {
   width: 80%;
@@ -191,7 +195,8 @@ body {
 .article:hover{
   background-color: hsl(192, 70%, 51%, 0.5);
   color: #fff;
-  transform: translateY(-10px); 
+  transform: translateY(-10px);
+  transition-duration: 0.4s; 
 }
 .article > img {
   width: 250px;
@@ -202,16 +207,17 @@ body {
   padding: 15px;
 }
 .content > p {
-  color: hsl(232, 56%, 11%);
-  font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
+  color: hsl(233, 8%, 40%);
+  line-height: 1.5;
   
 }
 
 .content > h4 {
-  color: hsl(238, 70%, 27%);
-  padding-bottom: 5px;
-  padding-top: 5px;
+  font-size: 25px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: hsl(233, 26%, 24%);
 }
 .footer {
   background-color: hsl(233, 26%, 24%);
@@ -238,6 +244,12 @@ body {
   color: white;
   margin-bottom: 15px;
   font-weight: 600;
+}
+
+.menu > a:hover{
+  color: hsl(192, 70%, 51%);
+  transition-duration: 0.5s;
+  border-bottom: 2px solid hsl(192, 70%, 51%);
 }
 .social-container {
   margin-top: 3rem;
